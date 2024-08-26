@@ -1,0 +1,72 @@
+#table{
+    position: relative;
+    width: 1340px;
+    height: 800px;
+    margin-left: 80px;
+    display: table;
+    border-color: black;
+    border-collapse: collapse;
+    
+
+}
+#product-type{
+    position: absolute;
+    left: 100px;
+}
+#quantity{
+    position: absolute;
+    left: 500px;
+}
+#quantity-input{
+    position: absolute;
+    left: 450px;
+   
+}
+#washtype{
+    position: absolute;
+    left: 800px;
+}
+#washing-img{
+    position:absolute;
+    left:750px;
+}
+#iron-img{
+    position: absolute;
+    left:800px;
+}
+#towel-img{
+    position: absolute;
+    left: 850px;
+}
+#bleach-img{
+    position: absolute;
+    left:900px;
+}
+#price{
+    position: absolute;
+    left: 1100px;
+}
+.pricechange{
+    position: absolute;
+    left : 1080px;
+}
+#reset{
+    position: absolute;
+    left : 150px;
+}
+#cancel{
+    position: absolute;
+    left  : 1100px;
+    top:853px;
+    background-color: red;
+    color: white;
+    border-radius: 4px;
+}
+#proceed{
+    position: absolute;
+    left : 1200px;
+    top:853px;
+    background-color: green;
+    color: white;
+    border-radius: 4px;
+}

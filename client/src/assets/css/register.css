@@ -1,0 +1,334 @@
+.register-maindiv{
+    position: relative;
+    top : 0px;
+    left : 0px;
+    height:1100px;
+    width:1550px;
+    background: transparent url('../images/register.jpg');
+    background-size: 1550px 1100px;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+.reg-div1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 500px;
+    background: none;
+}
+#reg-para1{
+    position: absolute;
+    top: 193px;
+    left:50px;
+    width: 200px;
+    height: 197px;
+    color: white;
+    text-align: left;
+    text-transform: capitalize;
+    font-family: Avenir;
+    font-size: 84px;
+    opacity: 1;
+}
+#reg-para2{
+    position: absolute;
+    top: 404px;
+    left:60px;
+    width:300px;
+    height:100px;
+    color:white;
+    text-align: left;
+    text-transform: capitalize;
+    font-family: Avenir;
+    font-size: 15px;
+    opacity: 1;
+
+}
+#reg-para3{
+    position: absolute;
+    top: 459px;
+    left:60px;
+    width:300px;
+    height:100px;
+    color:white;
+    text-align: left;
+    text-transform: capitalize;
+    font-family: Avenir;
+    font-size: 15px;
+    opacity: 1;
+}
+#reg-signin{
+    position:absolute;
+    top:500px;
+    left: 85px;
+    width:60px;
+    height:30px;
+    background: none;
+    color:white;
+    border-radius: 6px;
+    border-color: white;
+}
+.reg-div2{
+    position: absolute;
+    top: 0px;
+    left: 500px;
+    width: 1050px;
+    background: none;
+}
+.register{
+    position: absolute;
+    top:80px;
+    left:50px;
+    color: white;
+    opacity: 1;
+    font-size: 25px;
+}
+.register-maindiv > .reg-div2 > form >div > input{
+    border: none;
+    background: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+.register-maindiv > .reg-div2 > form >div > select{
+    border: none;
+    background: none;
+   outline: none;
+   font-size: 18px;
+}
+.reg-name{
+    position: absolute;
+    top: 139px;
+    left: 60px;
+    width: 322px;
+    height: 27px;
+    text-align: left;
+    font: normal normal normal 17px/27px Open Sans;
+    letter-spacing: 0.6px;
+    opacity: 1;
+}
+.reg-line1{
+    position : absolute;
+    top: 181px;
+    left: 61px;
+    width: 398px;
+    height: 0px;
+    border: 1px solid white;
+    opacity: 1;
+}
+.reg-email{
+    position : absolute;
+    margin-top: 139px;
+    left: 570px;
+    width: 322px;
+    height: 27px;
+    text-align: left;
+    font: normal normal normal 17px/27px Open Sans;
+    letter-spacing: 0.6px;
+    color: white;
+    opacity: 1;
+}
+.reg-line2{
+    position : absolute;
+    top: 181px;
+    left: 563px;
+    width: 398px;
+    height: 0px;
+    border: 1px solid white;
+    opacity: 1;
+}
+.reg-phone{
+    position : absolute;
+    margin-top: 236px;
+    left: 66.5px;
+    width: 322px;
+    height: 27px;
+    text-align: left;
+    font: normal normal normal 17px/27px Open Sans;
+    letter-spacing: 0.6px;
+    color:white;
+    opacity: 1;
+}
+.reg-line3{
+    position : absolute;
+    top: 278px;
+    left: 61px;
+    width: 398px;
+    height: 0px;
+    border: 1px solid white;
+    opacity: 1;
+}
+#reg-state {
+    position : absolute;
+    margin-top: 234px;
+    left: 570px;
+    width: 322px;
+    height: 27px;
+    text-align: left;
+    font: normal normal normal 19px/22px Avenir;
+    letter-spacing: 0.6px;
+    color:#77838F;
+    opacity: 1;
+}
+.reg-line4{
+    position : absolute;
+    top: 278px;
+    left: 563px;
+    width: 398px;
+    height: 0px;
+    border: 1px solid white;
+    opacity: 1;
+}
+#reg-district{
+    position : absolute;
+    margin-top: 310px;
+    left: 68.5px;
+    width: 322px;
+    height: 27px;
+    text-align: left;
+    font: normal normal normal 19px/27px Avenir;
+    letter-spacing: 0.6px;
+    color:#77838F;
+    opacity: 1;
+}
+.reg-line5{
+    position : absolute;
+    top: 375px;
+    left: 63px;
+    width: 398px;
+    height: 0px;
+    border: 1px solid white;
+    opacity: 1;
+}
+.reg-address{
+    position : absolute;
+    margin-top: 290px;
+    left: 570px;
+    width: 322px;
+    height: 27px;
+    text-align: left;
+    font: normal normal normal 17px/27px Open Sans;
+    letter-spacing: 0.6px;
+    color: #77838F;
+    opacity: 1;
+}
+.reg-line6{
+    position : absolute;
+    top: 375px;
+    left: 563px;
+    width: 398px;
+    height: 0px;
+    border: 1px solid white;
+    opacity: 1;
+}
+.reg-pincode{
+    position : absolute;
+    margin-top: 390px;
+    left: 68.5px;
+    width: 322px;
+    height: 27px;
+    text-align: left;
+    font: normal normal normal 17px/27px Open Sans;
+    letter-spacing: 0.6px;
+    color: #77838F;
+    opacity: 1;
+}
+.reg-line7{
+    position : absolute;
+    top: 471px;
+    left: 63px;
+    width: 398px;
+    height: 0px;
+    border: 1px solid white;
+    opacity: 1;
+}
+.reg-password{
+    position : absolute;
+    margin-top: 390px;
+    left: 570px;
+    width: 322px;
+    height: 27px;
+    text-align: left;
+    font: normal normal normal 17px/27px Open Sans;
+    letter-spacing: 0.6px;
+    color: #77838F;
+    opacity: 1;
+}
+.reg-line8{
+    position : absolute;
+    top: 471px;
+    left: 563px;
+    width: 398px;
+    height: 0px;
+    border: 1px solid white;
+    opacity: 1;
+}
+.reg-confirm{
+    position : absolute;
+    margin-top: 490px;
+    left: 66.5px;
+    width: 322px;
+    height: 27px;
+    text-align: left;
+    font: normal normal normal 17px/27px Open Sans;
+    letter-spacing: 0.6px;
+    color: #77838F;
+    opacity: 1;
+}
+.reg-line9{
+    position : absolute;
+    top: 577px;
+    left: 63px;
+    width: 398px;
+    height: 0px;
+    border: 1px solid white;
+    opacity: 1;
+}
+.reg-box{
+    position : absolute;
+    top: 642px;
+    left: 220px;
+    width: 22px;
+    height: 22px;
+    background: transparent url('../images/CD.svg') 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 3px;
+    opacity: 1;
+}
+.reg-terms{
+    position : absolute;
+    top: 642px;
+    left: 254px;
+    width: 566px;
+    height: 22px;
+    text-align: left;
+    text-decoration: underline;
+    font: normal normal normal 14px/20px Open Sans;
+    letter-spacing: 0.49px;
+    color: white;
+    opacity: 1;
+}
+.reg-button{
+    position : absolute;
+    top: 694.5px;
+    left: 438.25px;
+    width: 150px;
+    height: 50px;
+    color: white;
+    background: #5861AE 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

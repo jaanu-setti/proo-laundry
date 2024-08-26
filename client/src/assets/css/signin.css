@@ -1,0 +1,118 @@
+.signin-maindiv{
+    position: relative;
+    top : 0px;
+    left: 0px;
+    width: 1550px;
+    height:1100px;
+    background: transparent url('../images/login.jpg');
+    background-size: 1550px 1100px;
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+.signin-div1{
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   height :1100px;
+   width: 770px;
+   background: none;
+   opacity: 1;
+}
+
+ #signin-para1{
+    position: absolute;
+    top: 230px;
+    left: 152px;
+    width: 411px;
+    height: 257px;
+    color: white;
+    text-align: left;
+    font: normal normal 900 100px/120px Avenir;
+    letter-spacing: 0px;
+    font-weight: bolder; 
+    text-transform: capitalize;
+    opacity: 1;
+ }
+ #signin-para2{
+    position: absolute;
+    top:480px;
+    left: 160px;
+    font: normal normal normal 20px/26px Avenir;
+    letter-spacing: 0px;
+    opacity:1;
+ }
+ #signin-para3{
+    position: absolute;
+    top: 540px;
+    left : 185px;
+    letter-spacing: 0px;
+    font:normal normal normal 18px/22px Avenir;
+    opacity: 1;
+ }
+ #signin-register{
+    position: absolute;
+    top:590px;
+    left : 240px;
+    font: normal normal normal 18px/22px Avenir;
+    color:white;
+    background: blue;
+    border-radius: 6px;
+    border-color: white;
+ }
+ .signin-div2{
+    position: absolute;
+    top: 0px;
+    left: 770px;
+    height :1100px;
+    width: 775px;
+    background: none;
+    opacity: 1;
+ }
+ #signin{
+   position: absolute;
+   top :277px;
+   left : 130px;
+   width : 128px;
+   height : 44px;
+   text-align : left;
+   font-family: avenir;
+   font-size: 32px;
+   letter-spacing: 1.28px;
+   text-transform: uppercase;
+   color: white;
+   opacity: 1;
+ }
+ #signin-mobile{
+    position:absolute;
+    top:336px;
+    left : 180px;
+    width : 300px;
+    height : 40px ;
+    background: none;
+    font-family: Avenir;
+    font-size: 18px;
+    opacity: 1;
+ }
+ #signin-password{
+    position: absolute;
+    top:400px;
+    left : 180px;
+    width:300px;
+    height : 40px;
+    background: none;
+    font-family: Avenir;
+    font-size: 18px;
+    opacity: 1;
+ }
+ #signin-signin{
+    position: absolute;
+    top:460px;
+    left : 180px;
+    width : 80px;
+    height : 30px;
+    background: blue;
+    color: white;
+    border-color: white;
+    border-radius: 6px;
+
+ }

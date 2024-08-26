@@ -1,0 +1,52 @@
+.navbar{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 1440px;
+    height: 80px;
+    background: white no-repeat padding-box;
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+}
+#laundry{
+    position: absolute;
+    top: 20px;
+    left:300px;
+    font-size: large;
+    background: none;
+    color:rgb(49, 10, 127);
+    font-size: medium;
+    font-weight:bold;
+    opacity: 1;
+}
+#home{
+   position: absolute;
+   top: 20px;
+   left : 1100px;
+   background: none;
+   opacity: 1;
+}
+#pricing{
+    position: absolute;
+    top: 20px;
+    left : 1200px;
+    background: none;
+    opacity: 1;
+}
+#career{
+    position: absolute;
+    top:20px;
+    left : 1300px;
+    background: none;
+    opacity: 1;
+}
+#nav-signin{
+    position: absolute;
+    top: 40px;
+    left: 1400px;
+    color: white;
+    background: blue;
+    border-radius: 6px;
+    opacity: 1;
+}

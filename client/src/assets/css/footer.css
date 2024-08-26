@@ -1,0 +1,11 @@
+.footer{
+    top: 1500px;
+    left: 0px;
+    width: 1550px;
+    height: 50px;
+    background: #182838 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    color: white;
+    opacity: 1;
+    text-align: center;
+}
