@@ -11,8 +11,10 @@ import joggers from "../assets/images/joggers.jpg";
 import boxer from "../assets/images/boxer.avif"
 import others from "../assets/images/others.jpg"
 import "../assets/css/createorder.css"
-import Summary from "./summary";
 import { useNavigate } from "react-router-dom";
+import washingmachine2 from "../assets/images/washing-machine (2).svg"
+import ironing2 from "../assets/images/ironing (1).svg"
+import bleach2 from "../assets/images/bleach (1).svg"
 
 const tablelist=[
     {id : 1 ,imgurl:shirts, name : "Shirts" , description : "Lorem ipsum is simply dummy text of the",  Quantity:'', price:20},
@@ -31,17 +33,7 @@ export default function Orderpage(){
         products.map(product=>product.id===id?{...product , Quantity:(newquantity) } : product)
        )
     }
-    const[icon , setIcon]=useState({});
-    const toggleicon = (id , type) =>{
-      setIcon(prevState=>({
-        ...prevState,
-        [id]:{
-            ...(prevState[id] ||{}),
-            [type]:!prevState[id]?.[type]
-        }
-      }))
-      console.log(icon)
-    }
+    
     const Pricechange = (quantity , price)=>{
       return (quantity * price)
     }
@@ -50,18 +42,23 @@ export default function Orderpage(){
             products.map(product=>product.id===id?{...product , Quantity:(0) } : product)
            )
     }
-
+   const [image,setImage]=useState(true)
+    const toggleimage=(id)=>{
+       setImage(!image)
+    }
     const [selectedrow , setSelectedrow]=useState([]);
     const [submit , setSubmit] = useState(false);
     const Navigate=useNavigate();
     const proceedbutton=()=>{
         const newlist = products.filter(item=>item.Quantity>0)
-        console.log(newlist)
+        // console.log(newlist)d
         setSelectedrow(newlist)   
         setSubmit(true); 
         const data = selectedrow;
+        //console.log(selectedrow);
+        // data.length!==0? Navigate('/summary' , { state: { data } }):null;
+       
         Navigate('/summary' , { state: { data } })
-        
 
     }
     useEffect(() => {
@@ -95,10 +92,11 @@ export default function Orderpage(){
                           
                         </td>
                         <td>
-                            <img id="washing-img" src={washingmachine} alt="washing-machine" onClick={()=>toggleicon(item.id ,'washing') } /> 
-                            <img id="iron-img" src={ironing} alt="ironing"/> 
+                            <img id="washing-img" src={image?washingmachine:washingmachine2} alt="washing-machine" onClick={()=>toggleimage(item.id) } /> 
+                            <img id="iron-img" src={image?ironing:ironing2} alt="ironing" onClick={()=>toggleimage(item.id) }/> 
                             <img id="towel-img" src={towel} alt="towel"/> 
-                            <img id="bleach-img" src={bleach} alt="bleach"/> 
+                            <img id="bleach-img" src={image?bleach:bleach2} alt="bleach" onClick={()=>toggleimage(item.id) }/> 
+                            
                         </td>
                         <td>
                            {item.Quantity>0?(
@@ -117,7 +115,7 @@ export default function Orderpage(){
            <button id="cancel">Cancel</button>
            <button id="proceed" onClick={proceedbutton}>Proceed</button>
            
-           {selectedrow.length > 0 ?<Summary data={selectedrow}/>:<div></div>}
+           
            
         </div>
     )

@@ -1,8 +1,18 @@
-#table{
+#main-table-div{
     position: relative;
-    width: 1340px;
-    height: 800px;
-    margin-left: 80px;
+    width : 1500;
+    height : 900px;
+    
+}
+#table{
+    position: absolute;
+    width: 1300px;
+    height: 700px;
+    margin-left: 100px;
+    margin-top: 10px;
+    background: transparent url('../images/background4.jpg');
+    background-repeat: no-repeat;
+    background-size: 1300px  750px;
     display: table;
     border-color: black;
     border-collapse: collapse;
@@ -57,7 +67,7 @@
 #cancel{
     position: absolute;
     left  : 1100px;
-    top:853px;
+    top:780px;
     background-color: red;
     color: white;
     border-radius: 4px;
@@ -65,7 +75,7 @@
 #proceed{
     position: absolute;
     left : 1200px;
-    top:853px;
+    top:780px;
     background-color: green;
     color: white;
     border-radius: 4px;
