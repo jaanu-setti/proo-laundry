@@ -7,27 +7,79 @@
     border: 1px solid black;
 }
 #summarycontent{
-   
+  
     width: 800px;
-    height:30px;
+    height:35px;
+    text-align: left;
     margin-top: 0px !important;
     background-color: cornflowerblue;
 }
 #summaryform{
-    
+   
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin-top:auto;
+    height: 60px;
+    background-color: azure;
 }
 #locationdiv{
     
+    margin-top: 15px;
     margin-left: 10px;
 }
 #addressdiv{
- 
-    margin-left: 20px;
+    
+    margin-top: 15px;
+    margin-left: 50px;
 }
 #phonediv{
+  
+    margin-top: 15px;
+    margin-left: 120px;
+}
+#summary-table{
+ position: absolute;
+}
+#itemname{
    
-    margin-left: 30px;
+    margin-left: 50px;
+    width: 500px;
+    margin-top: 200px;
+    
+}
+#itemtype{
+   
+    margin-left: 300px;
+   width: 1000px;
+   margin-top: 200px;
+}
+#itemprice{
+  
+    margin-left: 550px;
+    width:800px;
+    margin-top: 200px;
+   
+}
+#subtotal{
+   position: absolute;
+    margin-left: 534px;
+}
+#pickup-charges{
+   position: absolute;
+    margin-left: 494px;
+    margin-top: 28px;
+}
+#total{
+  position: absolute;
+    height:35px;
+    width: 800px;
+    margin-top:50px ;
+    margin-left: 0px;
+    background-color: cornflowerblue;
+}
+#totalcharge{
+    position: absolute;
+    margin-left: 566px;
+    margin-top: 5px;
+    color: white;
 }

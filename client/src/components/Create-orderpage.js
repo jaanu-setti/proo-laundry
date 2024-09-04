@@ -1,4 +1,4 @@
-import React , {useState,useEffect } from "react";
+import React , {useState } from "react";
 import bleach from "../assets/images/bleach.jpg";
 import washingmachine from "../assets/images/washing-machine.jpg";
 import ironing from "../assets/images/ironing.jpg";
@@ -17,13 +17,13 @@ import ironing2 from "../assets/images/ironing (1).svg"
 import bleach2 from "../assets/images/bleach (1).svg"
 
 const tablelist=[
-    {id : 1 ,imgurl:shirts, name : "Shirts" , description : "Lorem ipsum is simply dummy text of the",  Quantity:'', price:20},
-    {id : 2 ,imgurl:tshirts, name : "T Shirts" , description : "Lorem ipsum is simply dummy text of the", Quantity:'', price:30},
-    {id : 3 ,imgurl:trousers, name : "Trousers" , description : "Lorem ipsum is simply dummy text of the", Quantity:'', price:40},
-    {id : 4 ,imgurl:jeans, name : "Jeans" , description : "Lorem ipsum is simply dummy text of the", Quantity:'', price:100},
-    {id : 5 ,imgurl:boxer, name : "Boxers" , description : "Lorem ipsum is simply dummy text of the", Quantity:'', price:60},
-    {id : 6 ,imgurl:joggers, name : "Joggers" , description : "Lorem ipsum is simply dummy text of the", Quantity:'', price:80},
-    {id : 7 ,imgurl:others, name : "Others" , description : "Lorem ipsum is simply dummy text of the", Quantity:'', price:50}
+    {id : 1 ,imgurl:shirts, name : "Shirts" , description : "Lorem ipsum is simply dummy text of the",  Quantity:'', washtype:[], price:20, iswashingToggled : false , isironingToggled : false, isbleachToggled:false},
+    {id : 2 ,imgurl:tshirts, name : "T Shirts" , description : "Lorem ipsum is simply dummy text of the", Quantity:'', washtype:[], price:30, iswashingToggled : false , isironingToggled : false, isbleachToggled:false},
+    {id : 3 ,imgurl:trousers, name : "Trousers" , description : "Lorem ipsum is simply dummy text of the", Quantity:'', washtype:[], price:40, iswashingToggled : false , isironingToggled : false, isbleachToggled:false},
+    {id : 4 ,imgurl:jeans, name : "Jeans" , description : "Lorem ipsum is simply dummy text of the", Quantity:'', washtype:[], price:100, iswashingToggled : false , isironingToggled : false, isbleachToggled:false},
+    {id : 5 ,imgurl:boxer, name : "Boxers" , description : "Lorem ipsum is simply dummy text of the", Quantity:'', washtype:[], price:60, iswashingToggled : false , isironingToggled : false, isbleachToggled:false},
+    {id : 6 ,imgurl:joggers, name : "Joggers" , description : "Lorem ipsum is simply dummy text of the", Quantity:'', washtype:[], price:80, iswashingToggled : false , isironingToggled : false, isbleachToggled:false},
+    {id : 7 ,imgurl:others, name : "Others" , description : "Lorem ipsum is simply dummy text of the", Quantity:'', washtype:[], price:50, iswashingToggled : false , isironingToggled : false, isbleachToggled:false}
 ]
 export default function Orderpage(){
      const[products,setProducts]=useState(tablelist);
@@ -42,30 +42,40 @@ export default function Orderpage(){
             products.map(product=>product.id===id?{...product , Quantity:(0) } : product)
            )
     }
-   const [image,setImage]=useState(true)
-    const toggleimage=(id)=>{
-       setImage(!image)
+   
+    const toggleimage=(id , type)=>{
+       setProducts(products.map(product=>{
+        if(product.id===id){
+             let updatedwashtype = [...product.washtype]
+             if(updatedwashtype.includes(type)){
+                updatedwashtype= updatedwashtype.filter(wash => wash !== type);
+             }
+             else{
+                updatedwashtype.push(type);
+             }
+             return{
+                ...product,
+                washtype : updatedwashtype ,
+                iswashingToggled : type==="  washing" ? !product.iswashingToggled:product.iswashingToggled,
+                isironingToggled : type === "  ironing" ? !product.isironingToggled:product.isironingToggled,
+                isbleachToggled : type=== "  bleach" ? !product.isbleachToggled : product.isbleachToggled
+             }
+        }
+        return product; 
+       }
+      
+       ))
+
     }
-    const [selectedrow , setSelectedrow]=useState([]);
-    const [submit , setSubmit] = useState(false);
+    
+   
     const Navigate=useNavigate();
     const proceedbutton=()=>{
         const newlist = products.filter(item=>item.Quantity>0)
-        // console.log(newlist)d
-        setSelectedrow(newlist)   
-        setSubmit(true); 
-        const data = selectedrow;
-        //console.log(selectedrow);
-        // data.length!==0? Navigate('/summary' , { state: { data } }):null;
-       
-        Navigate('/summary' , { state: { data } })
+        Navigate('/summary' , { state: { data : newlist } })
 
     }
-    useEffect(() => {
-        if (submit) {
-            console.log('Selected row after update:', selectedrow);
-        }
-    }, [submit, selectedrow]);
+    
 
     return(
         <div id="main-table-div">
@@ -92,10 +102,10 @@ export default function Orderpage(){
                           
                         </td>
                         <td>
-                            <img id="washing-img" src={image?washingmachine:washingmachine2} alt="washing-machine" onClick={()=>toggleimage(item.id) } /> 
-                            <img id="iron-img" src={image?ironing:ironing2} alt="ironing" onClick={()=>toggleimage(item.id) }/> 
+                            <img id="washing-img" src={item.washtype.includes("  washing")?washingmachine2:washingmachine} alt="washing-machine" onClick={()=>toggleimage(item.id , "  washing") } /> 
+                            <img id="iron-img" src={item.washtype.includes("  ironing")?ironing2:ironing} alt="ironing" onClick={()=>toggleimage(item.id, "  ironing") }/> 
                             <img id="towel-img" src={towel} alt="towel"/> 
-                            <img id="bleach-img" src={image?bleach:bleach2} alt="bleach" onClick={()=>toggleimage(item.id) }/> 
+                            <img id="bleach-img" src={item.washtype.includes("  bleach")?bleach2:bleach} alt="bleach" onClick={()=>toggleimage(item.id, "  bleach") }/> 
                             
                         </td>
                         <td>

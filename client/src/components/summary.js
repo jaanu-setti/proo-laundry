@@ -5,7 +5,16 @@ const Summary = ()=>{
    
     const location = useLocation();
     const { data } = location.state || {}; 
-    
+    let subtotal = 0;
+    let totalcharges = 0;
+    let pickupcharge=90;
+    const changeprice=(quantity , price)=>{
+       let total = (quantity*price)
+       subtotal=subtotal + total;
+       totalcharges=subtotal + pickupcharge;
+     return(total)
+     
+    }
 
     return(
         <div className="summarypage">
@@ -34,19 +43,31 @@ const Summary = ()=>{
             </div>
            </form>
            
-            {/* <table>
+            <table id="summary-table">
               <tbody>
-              
+              <tr>Order Details:-</tr>
                {data.map((item,index)=>(
                 <tr key={index}>
-                    <td>{item.name}</td>
-                    <td></td>
-                    <td>{item.price}</td>
+                    <td id="itemname">{item.name}</td>
+                    
+                    <td id="itemtype">{item.washtype}</td>
+                    
+                    <td id="itemprice">{item.Quantity} X {item.price} = {changeprice(item.Quantity , item.price)}</td>
                 </tr>
                ))}
+               <tr id="subtotal">
+               Sub Total = {subtotal}
+               </tr>
+               <tr id="pickup-charges">
+                Pickup Charges = 90
+               </tr>
+               <tr id="total">
+                <td id="totalcharge">Total = {totalcharges}</td>
+                </tr>
               
               </tbody>
-            </table> */}
+            </table>
+            
         </div>
     )
 }
