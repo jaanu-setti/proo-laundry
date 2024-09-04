@@ -1,4 +1,5 @@
 import React , {useState } from "react";
+import Navbar from "./Navbar";
 import bleach from "../assets/images/bleach.jpg";
 import washingmachine from "../assets/images/washing-machine.jpg";
 import ironing from "../assets/images/ironing.jpg";
@@ -67,17 +68,21 @@ export default function Orderpage(){
        ))
 
     }
-    
+    const[selectedproducts , setSelectedproducts]=useState([])
    
     const Navigate=useNavigate();
     const proceedbutton=()=>{
         const newlist = products.filter(item=>item.Quantity>0)
-        Navigate('/summary' , { state: { data : newlist } })
+        setSelectedproducts(newlist)
+        Navigate(selectedproducts.length>0?'/summary':alert('select atleast one product '), { state: { data : newlist } })
 
     }
     
 
     return(
+        <div>
+
+        <Navbar/>
         <div id="main-table-div">
            <table id="table">
             <thead> 
@@ -127,6 +132,7 @@ export default function Orderpage(){
            
            
            
+        </div>
         </div>
     )
 }

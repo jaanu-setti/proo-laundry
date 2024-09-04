@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import React,{useState} from "react";
 import '../assets/css/signin.css'
 import Footer1 from "./footer1";
+import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 
 const Signin = ()=>{
@@ -53,6 +54,7 @@ const Signin = ()=>{
     }
     return(
       <div>
+        <Navbar/>
           <div className="signin-maindiv">
             <div className="signin-div1">
                <div id="signin-para1">Laundry Service</div>

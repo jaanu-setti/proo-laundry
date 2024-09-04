@@ -9,7 +9,7 @@ import Summary from "./components/summary"
 const App =()=>{
     return(
         <div>
-           <Navbar/> 
+           {/* <Navbar/>  */}
            <BrowserRouter>
                <Routes>
                   <Route path="/" element={<Signin/>}></Route>

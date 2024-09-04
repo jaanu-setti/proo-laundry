@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
  import '../assets/css/register.css'
  import Footer1 from "./footer1";
+ import Navbar from "./Navbar";
 //import { Navigate } from 'react-router-dom';
 const Register = () => {
   const Navigate = useNavigate();
@@ -114,6 +115,7 @@ const Register = () => {
 
   return (
     <div>
+      <Navbar/>
       <div className="register-maindiv">
       <div className="reg-div1">
         <div id="reg-para1">Laundry Service</div>
