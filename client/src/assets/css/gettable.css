@@ -1,0 +1,55 @@
+#get-table-div{
+    position: relative;
+    width : 1450px;
+    height : 850px;
+    
+}
+#first-div{
+    position: absolute;
+    display: flex;
+}
+#order{
+    position: absolute;
+    margin-left: 200px;
+    width: 300px;
+}
+#button{
+    position: absolute;
+    margin-left: 1200px;
+    background-color: white;
+    border-color:rgb(78, 78, 183);
+    color:rgb(78, 78, 183);
+}
+#image-search{
+    position: absolute;
+    margin-left: 1280px;
+
+}
+#line{
+    display: inline;
+}
+#gettable{
+    position: absolute;
+    display: table;
+    text-align:center;
+    margin-left: 100px;
+    margin-top: 50px;
+    width : 1300px;
+    height : 700px;
+   
+   border-collapse: collapse;
+    
+}
+#gettable th, #gettable td {
+    border: 1px solid black; /* Border around each cell */
+    padding: 8px;            /* Adds padding inside the cells */
+        
+}
+#head{
+    background-color:lightslategray;
+    color: white;
+}
+#view img{
+    display: block;
+
+}

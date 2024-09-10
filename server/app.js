@@ -19,4 +19,7 @@ app.use(cors({
 const user = require("./Routes/User")
 app.use('/user',user);
 
+const order = require('./Routes/order')
+app.use('/order',order)
+
 app.listen(5000,()=>console.log("app is running at port 5000"));

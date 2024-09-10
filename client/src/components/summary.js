@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import '../assets/css/summary.css'
 const Address = [
     {type : "Home", address : "#223 , 10th road , JP nagar , Bnaglore"},
@@ -19,6 +19,10 @@ const Summary = ()=>{
      return(total)
      
     }
+  const [selectedlocation , setSelectedlocation]=useState('')
+  const handlelocationchange = (e)=>{
+    setSelectedlocation(e.target.value)
+  }
     const[shownew , setShownew]=useState(false)
     const [newaddress , setNewaddress]=useState('')
     const toggleinput = ()=>{
@@ -34,6 +38,28 @@ const Summary = ()=>{
         setNewaddress('')
         setShownew(false);
         
+
+    }
+   const navigate = useNavigate();
+    const summaryconfirm=()=>{
+       const orderDetails = {
+        data : data, 
+        location : selectedlocation,
+        totalprice : totalcharges
+       }
+       fetch('http://localhost:5000/order/submitorder',
+        {
+            method : 'POST',
+            headers : {
+                'Content-Type' : 'application/json'
+            },
+            body : JSON.stringify(orderDetails)
+        }
+       )
+       .then(res=>res.json())
+       .then(data=>console.log('data submitted',data))
+       .catch(error=>console.log(error))
+       navigate('/getorders')
     }
     return(
         <div className="summarypage">
@@ -41,13 +67,13 @@ const Summary = ()=>{
               <h3>Summary</h3>
            </div> 
           
-           <form id="summaryform">
+           <form id="summaryform" method="POST" >
             <div id="locationdiv">
-                <select>
-                   <option>select location</option>
-                   <option>JP nagar</option>
-                   <option>Jaya nagar</option>
-                   <option>Indira nagar</option>
+                <select onChange={handlelocationchange} value={selectedlocation}>
+                   <option value=''>select location</option>
+                   <option value="JP nagar">JP nagar</option>
+                   <option value="Jaya nagar">Jaya nagar</option>
+                   <option value="Indira nagar">Indira nagar</option>
                </select>
             </div>
             
@@ -109,7 +135,7 @@ const Summary = ()=>{
                  </div>
                  <button id="addnewbutton" onClick={toggleinput}>Add New</button>
             </div>
-            <button id="summaryconfirm" >Confirm</button>
+            <button id="summaryconfirm"  onClick={summaryconfirm}>Confirm</button>
             
         </div>
     )

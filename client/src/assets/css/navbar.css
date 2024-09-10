@@ -12,7 +12,7 @@
 #laundry{
     position: absolute;
     top: 20px;
-    left:300px;
+    left:180px;
     font-size: large;
     background: none;
     color:rgb(49, 10, 127);
@@ -23,28 +23,28 @@
 #home{
    position: absolute;
    top: 20px;
-   left : 1100px;
+   left : 985px;
    background: none;
    opacity: 1;
 }
 #pricing{
     position: absolute;
     top: 20px;
-    left : 1200px;
+    left : 1102px;
     background: none;
     opacity: 1;
 }
 #career{
     position: absolute;
     top:20px;
-    left : 1300px;
+    left : 1231px;
     background: none;
     opacity: 1;
 }
 #nav-signin{
     position: absolute;
     top: 40px;
-    left: 1400px;
+    left: 1325px;
     color: white;
     background: blue;
     border-radius: 6px;
