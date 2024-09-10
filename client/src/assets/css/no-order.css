@@ -1,0 +1,41 @@
+.no-div{
+    position: relative;
+}
+.no-firstdiv{
+    display: flex;
+}
+.no-seconddiv{
+    position: absolute;
+    display: block;
+}
+.no-span {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 190px;
+    width: 100px;
+}
+.no-img{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1200px;
+   
+}
+#no-span2{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 1200px;
+}
+#no-span3{
+    position: absolute;
+    margin-top: 330px;
+    margin-left: 645px;
+    width: 200px;
+}
+#no-button{
+    position: absolute;
+    margin-top: 360px;
+    margin-left: 660px;
+    background-color: white;
+    border-color: rgb(46, 46, 153);
+    color: rgb(46, 46, 153);
+}

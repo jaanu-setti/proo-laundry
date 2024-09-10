@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import  search  from '../assets/images/search.png';
 import { useNavigate} from 'react-router-dom';
 import SideBar  from "../components/side-bar"
+import { Footer } from './footer';
 const Getorders =()=>{
     const [orders , setOrders]=useState([])
     useEffect(()=>{
@@ -73,6 +74,7 @@ const Getorders =()=>{
           </table>
             </div>
             </div>
+            <Footer/>
         </div>
     )
 }

@@ -42,7 +42,7 @@ const Signin = ()=>{
             alert(data.message);
           } else {
             console.log(data);
-            Navigate("/orderspage");
+            Navigate("/noorder");
           }
         })
        

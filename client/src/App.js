@@ -5,7 +5,7 @@ import Register from "./components/Register"
 import Orderpage from "./components/Create-orderpage"
 import Summary from "./components/summary"
 import Getorders from "./components/getorderspage"
-
+import Noorder from "./components/no-orderpage"
 const App =()=>{
     return(
         <div>
@@ -17,6 +17,7 @@ const App =()=>{
                   <Route path="/orderspage" element={<Orderpage/>}></Route>
                   <Route path="/summary" element={<Summary/>}></Route>
                   <Route path="/getorders" element={<Getorders/>}></Route>
+                  <Route path="/noorder" element={<Noorder/>}></Route>
                </Routes>
            </BrowserRouter>
            {/* <Footer/> */}
