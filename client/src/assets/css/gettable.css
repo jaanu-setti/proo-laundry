@@ -8,6 +8,9 @@
     position: absolute;
     display: flex;
 }
+#gettable-second-div{
+    display:flex ;
+}
 #order{
     position: absolute;
     margin-left: 200px;

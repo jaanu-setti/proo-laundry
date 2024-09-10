@@ -4,6 +4,9 @@
     height : 900px;
     
 }
+#second-div{
+    display: flex;
+}
 #table{
     position: absolute;
     width: 1300px;

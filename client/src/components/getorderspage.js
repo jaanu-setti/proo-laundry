@@ -4,7 +4,7 @@ import eye from '../assets/images/eye.jpg'
 import Navbar from '../components/Navbar'
 import  search  from '../assets/images/search.png';
 import { useNavigate} from 'react-router-dom';
-
+import SideBar  from "../components/side-bar"
 const Getorders =()=>{
     const [orders , setOrders]=useState([])
     useEffect(()=>{
@@ -21,6 +21,10 @@ const Getorders =()=>{
     return(
         <div id='get-table-div'>
             <Navbar/>
+            <div id='gettable-second-div'>
+               
+            <SideBar/>
+            <div>
             <div id='first-div'>
                 <div id='order'>Orders | 0</div>
                 <div ><button id='button' onClick={handleCreate}>create</button></div>
@@ -67,6 +71,8 @@ const Getorders =()=>{
             }
             </tbody>
           </table>
+            </div>
+            </div>
         </div>
     )
 }

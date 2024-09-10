@@ -16,6 +16,7 @@ import { useNavigate } from "react-router-dom";
 import washingmachine2 from "../assets/images/washing-machine (2).svg"
 import ironing2 from "../assets/images/ironing (1).svg"
 import bleach2 from "../assets/images/bleach (1).svg"
+import SideBar from "./side-bar";
 
 const tablelist=[
     {id : 1 ,imgurl:shirts, name : "Shirts" , description : "Lorem ipsum is simply dummy text of the",  Quantity:'', washtype:[], price:20, iswashingToggled : false , isironingToggled : false, isbleachToggled:false},
@@ -83,6 +84,8 @@ export default function Orderpage(){
         <div>
 
         <Navbar/>
+        <div id="second-div">
+        <SideBar/>
         <div id="main-table-div">
            <table id="table">
             <thead> 
@@ -133,6 +136,8 @@ export default function Orderpage(){
            
            
         </div>
+ 
         </div>
+               </div>
     )
 }
