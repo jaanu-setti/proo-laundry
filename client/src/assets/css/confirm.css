@@ -1,0 +1,37 @@
+#confirm-first-div{
+    position: absolute;
+    width:600px;
+    height : 500px;
+    margin-top: 150px;
+    margin-left: 500px;
+    background-color:darkgray;
+}
+#confirm-img{
+    position: absolute;
+    margin-top: 57px;
+    margin-left: 222px;
+}
+#h4{
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 233px;
+}
+#confirm-span{
+    position: absolute;
+    margin-top: 330px;
+    margin-left: 160px;
+}
+#confirm-button{
+    position: absolute;
+    margin-top: 380px;
+    margin-left: 254px;
+    background-color: cornflowerblue;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    border-color: cornflowerblue;
+}
+#confirm-sidebar{
+    display: flex;
+}

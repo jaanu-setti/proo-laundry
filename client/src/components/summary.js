@@ -59,7 +59,7 @@ const Summary = ()=>{
        .then(res=>res.json())
        .then(data=>console.log('data submitted',data))
        .catch(error=>console.log(error))
-       navigate('/getorders')
+       navigate('/confirm')
     }
     return(
         <div className="summarypage">
